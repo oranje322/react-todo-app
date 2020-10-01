@@ -17,7 +17,7 @@
     font-weight: bold;
     font-size: 32px;
     line-height: 39px;
-    color: #64C4ED;
+    color: black;
   }
 }
 
@@ -32,7 +32,7 @@
 margin-top: 45px;
   input {
     width: 100%;
-    margin-top: 15px;
+
 
   }
 
@@ -43,8 +43,24 @@ margin-top: 45px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    align-items: center;
+    justify-content: space-between;
 
 
+
+    .tasks__item__svg {
+      opacity: 0;
+      margin-left: 5px
+    }
+
+
+    .taskItemWrap {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+
+    }
 
     .checkbox {
 
@@ -55,7 +71,7 @@ margin-top: 45px;
         height: 20px;
         width: 20px;
         border-radius: 50%;
-        border: 2px solid #e8e8e8;
+        border: 2px solid #ccb59b;
         margin-right: 15px;
         align-items: center;
         justify-content: center;
@@ -68,12 +84,12 @@ margin-top: 45px;
       }
 
       label:hover {
-        background-color: #f2f2f2;
-        border-color: #f2f2f2;
+        background-color: #ccb59b;
+        border-color: #ccb59b;
         svg {
           opacity: 1;
           path {
-            stroke: #B2B2B2
+            stroke: black;
           }
         }
       }
@@ -93,6 +109,14 @@ margin-top: 45px;
       display: none;
       }
     }
+  }
+
+  .tasks__item:hover {
+    .tasks__item__svg {
+      opacity: 1;
+      stroke: black;
+    }
+
   }
 
 }
@@ -145,4 +169,28 @@ margin-top: 45px;
   }
 
 
+}
+
+.newTaskInput {
+  margin-top: 20px;
+}
+
+.changeTaskInput {
+  padding: 5px;
+  background: #FFFFFF;
+  border: 1px solid #767676;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+}
+
+.emptyTasks {
+  p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+      color: #ccb59b;
+  }
 }
